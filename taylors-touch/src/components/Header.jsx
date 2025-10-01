@@ -1,3 +1,13 @@
-export default function Header() {
-  return <header><h2>Taylor's Touch</h2></header>;
+import { Link } from "react-router-dom";
+
+function Header() {
+  return (
+    <header>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+    </header>
+  );
 }
+
+export default Header;
