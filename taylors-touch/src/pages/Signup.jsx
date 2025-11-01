@@ -34,6 +34,10 @@ function Signup() {
     }
   };
 
+  const handleGoogleSignup = () => {
+    window.location.href = `${import.meta.env.VITE_API_BASE}/auth/google`;
+  };
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -80,6 +84,10 @@ function Signup() {
         <br />
         <button type="submit">Sign Up!</button>
       </form>
+      <p>or</p>
+      <button type="button" onClick={handleGoogleSignup}>
+        Sign Up with Google
+      </button>
       <br />
       <p>
         Already have an account?{" "}

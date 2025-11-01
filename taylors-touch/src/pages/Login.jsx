@@ -25,8 +25,12 @@ function Login() {
     }
   };
 
+  const handleGoogleLogin = () => {
+    window.location.href = `${import.meta.env.VITE_API_BASE}/auth/google`;
+  };
+
   return (
-    <>
+    <div>
       <form onSubmit={handleSubmit}>
         <h2>Login</h2>
         <input
@@ -47,13 +51,18 @@ function Login() {
         <br />
         <button type="submit">Login</button>
       </form>
+      <p>or</p>
+      <button type="button" onClick={handleGoogleLogin}>
+        Login with Google
+      </button>
+      <br />
       <p>
         Don't have an account yet?{" "}
         <Link to="/register">
-          <button>Sign Up!</button>
+          <button>Sign Up</button>
         </Link>
       </p>
-    </>
+    </div>
   );
 }
 
